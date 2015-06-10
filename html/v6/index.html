@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Check My Competence - Main</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+  <ul id="menu">
+    <li><a href="https://github.com/fictmembers/competition_project">Git</a></li>
+    <li><a href="https://github.com/fictmembers/documents">          Документи</a></li>
+    <li><a href="kart.html">Карта сайту</a></li>
+    <li><a href="diagr.html">Дерево робіт</a></li>    
+  </ul>
+</div>
+<div id="content">
+  <div id="colOne">
+      <h3>Версії проекту:</h3>
+      <ul class="bottom">
+        <li class="first">    <a href="../v1/index.html">Версія 1</a></li>
+                          <li><a href="../v2/index.html">Версія 2</a></li>
+                          <li><a href="../v3/index.html">Версія 3</a></li>
+                          <li><a href="../v4/index.html">Версія 4</a></li>
+                          <li><a href="../v5/index.html">Версія 5</a></li>
+                          <li><a href="../v6/index.html">Версія 6</a></li>
+                          <li><a href="../v7/index.html">Версія 7</a></li>
+                          <li><a href="../v8/index.html">Версія 8</a></li>
+      </ul>
+  </div>
+  <div id="colTwo">
+    <div class="box">
+      <p class="bottom"><strong><h2>Модуль листування</h2></strong></br>Додати модулю для листування, що забезпечить спілкування між компаніями та користувачами.</p>
+
+      <p><h2><strong>Опис будови модулю «листування»:</strong></h2></p>
+      <p>
+        <img src="code/1.png" alt="" width="600px" class="image"> </br>
+        <p>Для модулю листування у данні версії роботи можливі наступні функції:</p>
+        <ul>
+          
+          <li><strong>destroy</strong> - знищенняповідомлення.</li>
+          <li><strong>new</strong> - утворює нове повідомлення.</li>
+          <li><strong>create</strong> - зберігає нове повідомлення у БД.</li>
+          <li><strong>promo_require</strong> - захисна функція, що не дає утворювати повідомлення незалогіненому користувачу.</li>
+          <li><strong>correct_company</strong> - повертає запис на поточного користувача.</li>
+        </ul>
+      </p>
+
+
+      <p class="bottom"><h2><strong>Взаємодія з таблицею у БД:</strong> </h2>        
+        <img src="code/3.png" alt="" width="600px" class="image" />
+      </p>
+        </br>
+        <p>
+        Як можемо бачити, у моделі прописано, що наші листи належать до їх утворювача - компанії. Тобто у базі даних компаній до кожного листа приєднується посилання на його хозяїна через forein key. За замовчанням усі повідомлення будуть виводитися відсортованими по часу їх додаваняя, але у зворотньому порядку.   
+        </p>
+
+      <p class="bottom"><h2><strong>Допоміжний механізм:</strong> </h2>        
+        <img src="code/2.png" alt="" width="600px" class="image" />
+      </p>
+      </br>
+        Для того, щоб при написанны листа, в адресати можна було обрати кого завгодно, використовується допоміжний механізм, що проводить пошук та виводить усіх зареєстрованих користувачів.
+
+      <p class="bottom"><h2><strong>Представлення у таблиці:</strong> </h2>        
+        <img src="code/4.png" alt="" width="600px" class="image" />
+      </p>
+      </br>
+      <p>
+        Для кожного «листа» передбачаються наступні поля:
+        <ul>
+          <li><strong>text</strong> - Інформаційний блок листа.</li>
+          <li><strong>recipient</strong> - Пошта для авторизації.</li>
+          <li><strong>created_at</strong> - Час утворення запису.</li>
+          <li><strong>updated_at</strong> - Час утворення запису.</li>
+          <li><strong>task</strong> - Тема завдання.</li>
+          <li><strong>company_sender</strong> - Назва компанії, що надсилає повідомлення, .</li>
+          <li><strong>company_id</strong> - foreign key.</li>
+        </ul>
+
+      <p>Через переглядач бази даних, бачимо наступне:</p>
+      <img src="code/5.png" width="600px" alt="" class="image">
+      
+      <p class="bottom"><h2><strong>Зовнішній вигляд кабінету:</strong> </h2> 
+        <p> Вікно утворення нового нового повідомлення:</p>       
+          <img src="code/6.jpg" width="600px" alt="" class="image" />
+        <p> Вікно перегляду вхідних повідомлень:</p>   
+        <img src="code/7.jpg" width="600px" alt="" class="image" />
+      </p>
+      </br>
+    </div>
+
+  </div>
+</div>
+<div id="footer">
+  <p>Copyright (c) 2006 Sitename.com. All rights reserved. Design by <a href="http://freecsstemplates.org/">Free CSS Templates</a>.</p>
+</div>
+</body>
+</html>
