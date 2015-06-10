@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Check My Competence - Main</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+  <ul id="menu">
+    <li><a href="https://github.com/fictmembers/competition_project">Git</a></li>
+    <li><a href="https://github.com/fictmembers/documents">          Документи</a></li>
+    <li><a href="kart.html">Карта сайту</a></li>
+    <li><a href="diagr.html">Дерево робіт</a></li>    
+  </ul>
+</div>
+<div id="content">
+  <div id="colOne">
+      <h3>Версії проекту:</h3>
+      <ul class="bottom">
+        <li class="first">    <a href="html/v1/index.html">Версія 1</a></li>
+                          <li><a href="html/v2/index.html">Версія 2</a></li>
+                          <li><a href="html/v3/index.html">Версія 3</a></li>
+                          <li><a href="html/v4/index.html">Версія 4</a></li>
+                          <li><a href="html/v5/index.html">Версія 5</a></li>
+                          <li><a href="html/v6/index.html">Версія 6</a></li>
+                          <li><a href="html/v7/index.html">Версія 7</a></li>
+                          <li><a href="html/v8/index.html">Версія 8</a></li>
+      </ul>
+  </div>
+  <div id="colTwo">
+    <div class="box">
+      <p class="bottom"><strong><h2>Профіль корстувача</h2></strong></br>Утворити кабінет користувача з усіма належними та необхідним частинами (реєстрація, вхід, редагування та додання інформації).</p>
+
+      <p><h2><strong>Опис будови модулю «Користувачів»:</strong></h2></p>
+      <p>
+        <img src="code/1.png" alt="" width="600px" class="image"> </br>
+        <p></p>
+        <ul>
+          Для модулю користувача у данні версії роботи можливі наступні функції:
+          <li><strong>show</strong> - виводить головну сторінку для поточного користувача.</li>
+          <li><strong>index</strong> - виводить список усіх користувача.</li>
+          <li><strong>new</strong> - утворює новий обліковий запис.</li>
+          <li><strong>create</strong> - зберігає новий обліковий запис.</li>
+          <li><strong>edit</strong> - дозволяє редагувати вже існуючий профіль.</li>
+          <li><strong>code</strong> - перегляд сторінки для введення коду.</li>
+          <li><strong>check_code</strong> - захисна функція для перевірки правильності введеного коду</li>
+          <li><strong>signed_in_user</strong> - захисна функція(сессія), що не дає переглядати і змінювати незалогіненому користувачу змінювати інформацію .</li>
+        </ul>
+      </p>
+        <img src="code/3.png" alt="" width="600px" class="image"> </br>
+        <ul>
+          Модуль юзеру містить багато функцій обробок інформації тому що це основа системи:
+          <li><strong>invitations</strong> - виводить головну сторінку для поточного користувача.</li>
+          <li><strong>account</strong> - виводить сторынку з акаунтом.</li>
+          <li><strong>user_params</strong> - приватна функцыя для передачы даних зы сторынки в бд.</li>
+        </ul>
+      </p>
+
+      <p class="bottom"><h2><strong>Взаємодія з БД:</strong> </h2>        
+        <img src="code/4.png" alt="" width="600px" class="image" />
+      </p>
+        Ми бачимо що забезпечена безпека паролів завдяки методу Rails has_secure_password. При реєстрації для правильності заповнення бази, від людини будуть вимагатися наступні дані: ім’я, курс навчання ,спеціальність та дата народження. Для перевірки правильності введеної пошти використовується шаблон VALID_EMAIL_REGEX. Для кожного входу юзера утворюється власний токен безпеки, що зберігається у браузері.
+
+      <p class="bottom"><h2><strong>Налаштуванн шляхів:</strong> </h2>        
+        <img src="code/5.png" alt="" width="600px" class="image" />
+      </p>
+      </br>
+        Для коректної роботи проекту, модуль «користувачів» був доданий до ресурсного роутингу (тобто усі стандартні сторінки автоматично будуть підхоплені при виконанні додатку). Але були дописані деяки шляхи для виконання тих чи інших дій які може виконувати юзер
+
+      <p class="bottom"><h2><strong>Представлення у таблиці:</strong> </h2>        
+        <img src="code/6.png" alt="" width="600px" class="image" />
+      </p>
+      </br>
+      <p>
+        Для кожного «користувача» передбачаються наступні поля:
+        <ul>
+          <li><strong>name</strong> - Ім’я.</li>
+          <li><strong>email</strong> - Пошта для авторизації.</li>
+          <li><strong>manager</strong> - курс навчання </li>
+          <li><strong>manager</strong> - спеціальність </li>
+          <li><strong>created_at</strong> - Час утворення запису.</li>
+          <li><strong>updated_at</strong> - Час утворення запису.</li>
+          <li><strong>password_digest</strong> - зашифрований пароль.</li>
+        </ul>
+
+      <p class="bottom"><h2><strong>Зовнішній вигляд кабінету:</strong> </h2>        
+        <img src="code/7.png" width="600px" alt="" class="image" />
+      </p>
+      </br>
+    </div>
+
+  </div>
+</div>
+<div id="footer">
+  <p>Copyright (c) 2006 Sitename.com. All rights reserved. Design by <a href="http://freecsstemplates.org/">Free CSS Templates</a>.</p>
+</div>
+</body>
+</html>
