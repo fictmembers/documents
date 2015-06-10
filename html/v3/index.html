@@ -8,7 +8,6 @@
 <body>
 <div id="header">
   <ul id="menu">
-    <li><a href="index.html">Home</a></li>
     <li><a href="https://github.com/fictmembers/competition_project">Git</a></li>
     <li><a href="https://github.com/fictmembers/documents">          Документи</a></li>
     <li><a href="aboutme.html">About</a></li>
@@ -29,15 +28,62 @@
       </ul>
   </div>
   <div id="colTwo">
-    <h2>Версія 3</h2>
-    <p class="bottom"><strong>Профіль компанії</strong></br>Утворити кабінет компанії з усіма належними та необхідним частинами (реєстрація, вхід, редагування та додання інформації).</br>
-  </br></p>
-  
-  
     <div class="box">
-      <h3>Версія - 1. </br><a href="html/v1/index.html">Пошук вже існуючих ресурсів.</a></h3>
-      <h4><strong>09.03.2015</strong> |</h4>
-      <p class="bottom"><strong>Завдання:</strong> Здійснити пошук вже існуючих проектів на дану тематику та розробити гооловну сторінку проекту з описом її будови.</p>
+      <p class="bottom"><strong><h2>Профіль компанії</h2></strong></br>Утворити кабінет компанії з усіма належними та необхідним частинами (реєстрація, вхід, редагування та додання інформації).</p>
+
+      <p><h2><strong>Опис будови модулю «Екзаменаторів»:</strong></h2></p>
+      <p>
+        <img src="code/1.png" alt="" width="600px" class="image"> </br>
+        <p></p>
+        <ul>
+          Для модулю екзаменатора у данні версії роботи можливі наступні функції:
+          <li><strong>show</strong> - виводить головну сторінку для поточного користувача.</li>
+          <li><strong>index</strong> - виводить список усіх екзаменаторів.</li>
+          <li><strong>new</strong> - утворює новий обліковий запис.</li>
+          <li><strong>create</strong> - зберігає новий обліковий запис.</li>
+          <li><strong>edit</strong> - дозволяє редагувати вже існуючий профіль.</li>
+          <li><strong>update</strong> - дозволяє додати нову інформацію про поточного користувача модуля.</li>
+          <li><strong>company_params</strong> - захисна функція для перевірки правильності введення інформації при регістрації.</li>
+          <li><strong>signed_in_company</strong> - захисна функція, що не дає переглядати і змінювати незалогіненому користувачу змінювати інформацію.</li>
+          <li><strong>correct_company</strong> - повертає запис на поточного користувача.</li>
+        </ul>
+      </p>
+
+
+      <p class="bottom"><h2><strong>Взаємодія з таблицею у БД:</strong> </h2>        
+        <img src="code/2.png" alt="" width="600px" class="image" />
+      </p>
+        Можемо бачимо, що поточний стан компанії дозволяє утворювати зашифровані паролі для «екзаменаторів» функцією has_secure_password. При реєстрації для правильності заповнення бази, від людини будуть вимагатися наступні дані: ім’я, пошту та назву компанії. Для перевірки правильності введеної пошти використовується шаблон VALID_EMAIL_REGEX. Для кожної сесії утворюється власний токен безпеки, що зберігається у кукі.
+
+      <p class="bottom"><h2><strong>Налаштуванн шляхів:</strong> </h2>        
+        <img src="code/3.png" alt="" width="600px" class="image" />
+      </p>
+      </br>
+        Для коректної роботи проекту, модуль «екзаменаторів» був доданий до ресурсів (тобто усі стандартні сторінки автоматично будуть підхоплені при виконанні додатку). Але був переписаний шлях до поточного профілю для того, щоб динамічно відображати id користувача.
+
+      <p class="bottom"><h2><strong>Представлення у таблиці:</strong> </h2>        
+        <img src="code/4.png" alt="" width="600px" class="image" />
+      </p>
+      </br>
+      <p>
+        Для кожного «екзаменатора» передбачаються наступні поля:
+        <ul>
+          <li><strong>name</strong> - Назва організації, де працює екзаменатор.</li>
+          <li><strong>email</strong> - Пошта для авторизації.</li>
+          <li><strong>manager</strong> - ПІБ екзаменатора.</li>
+          <li><strong>created_at</strong> - Час утворення запису.</li>
+          <li><strong>updated_at</strong> - Час утворення запису.</li>
+          <li><strong>password_digest</strong> - зашифрований пароль.</li>
+          <li><strong>remember_token</strong> - токен авторизації.</li>
+        </ul>
+
+      <p>Через переглядач бази даних, бачимо наступне:</p>
+      <img src="code/5.png" width="600px" alt="" class="image" />
+
+      <p class="bottom"><h2><strong>Зовнішній вигляд кабінету:</strong> </h2>        
+        <img src="code/6.jpg" width="600px" alt="" class="image" />
+      </p>
+      </br>
     </div>
 
   </div>
