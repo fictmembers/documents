@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Check My Competence - Main</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+  <ul id="menu">
+    <li><a href="https://github.com/fictmembers/competition_project">Git</a></li>
+    <li><a href="https://github.com/fictmembers/documents">          Документи</a></li>
+  </ul>
+</div>
+<div id="content">
+  <div id="colOne">
+      <h3>Версії проекту:</h3>
+      <ul class="bottom">
+        <li class="first">    <a href="../v1/index.html">Версія 1</a></li>
+                          <li><a href="../v2/index.html">Версія 2</a></li>
+                          <li><a href="../v3/index.html">Версія 3</a></li>
+                          <li><a href="../v4/index.html">Версія 4</a></li>
+                          <li><a href="../v5/index.html">Версія 5</a></li>
+                          <li><a href="../v6/index.html">Версія 6</a></li>
+                          <li><a href="../v7/index.html">Версія 7</a></li>
+                          <li><a href="../v8/index.html">Версія 8</a></li>
+      </ul>
+  </div>
+  <div id="colTwo">
+    <div class="box">
+      <p class="bottom"><strong><h2>Додавання тестів компанії</h2></strong></br>Зробити так званий генератор тестів для кожної компанії на ії сторінці</p>
+
+      <p><h2><strong>Опис будови модулю «Генератор тестів»:</strong></h2></p>
+      <p>
+        <img src="code/1.png" alt="" width="600px" class="image"> </br>
+        <p></p>
+        <ul>
+          Для кожної компанії можливе додавання власних завдань для оцінки знань або додавання логічних тестів
+          Генератор тестів - сторінка на якій компанія може додати власне завдання <br />
+          Сам генератор має поле для вводи запитання,також поля для відповідей,і поле де треба відмітити правильну відповідь <br />
+          Ще потрібно вибрати,у яку саме БД буде занесений тест (логічні тести/тести на знання)
+          Після того як ви додали тест ТІЛЬКИ ВАШІЙ компанії буде наданий доступ до нього(буде прив’язаний до компанії)
+        </ul>
+      </p>
+        <img src="code/2.png" alt="" width="600px" class="image"> </br>
+        <img src="code/3.png" alt="" width="600px" class="image"> </br>
+        <img src="code/4.png" alt="" width="600px" class="image"> </br>
+        <ul>
+          Модуль додвання тестів строго прив’язаний до конкретної компанії(За допомогою методу Rails (has_many/belongs_to)):
+        </ul>
+      </p>
+
+      <p class="bottom"><h2><strong>Взаємодія з БД:</strong> </h2>        
+        <img src="code/5.png" alt="" width="600px" class="image" />
+      </p>
+        Ми бачимо що після додавання тесту в полі company_id записаний айді компанії яка додала його
+
+      <p class="bottom"><h2><strong>Додавання тестів системи:</strong> </h2>        
+        <img src="code/6.png" alt="" width="600px" class="image" />
+      </p>
+      </br>
+       Також компанія може додавати тести з бд системи у свою БД
+
+  </div>
+</div>
+<div id="footer">
+  <p>Copyright (c) 2006 Sitename.com. All rights reserved. Design by <a href="http://freecsstemplates.org/">Free CSS Templates</a>.</p>
+</div>
+</body>
+</html>
