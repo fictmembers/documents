@@ -52,6 +52,12 @@ a:hover {
 	background: url(images/img07.gif) repeat-x left bottom;
 }
 
+.info
+{
+    font-size: 12pt;
+    color: black;
+}
+
 .bottom {
 	display: block;
 	margin-bottom: 0;

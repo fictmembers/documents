@@ -14,12 +14,6 @@ img.bg {
     max-width: none;
   }
 
-  .info
-  {
-      font-size: 12pt;
-      color: black;
-  }
-
 body {
 	margin: 20px 0;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -57,6 +51,26 @@ a:hover {
 	padding-bottom: 0;
 	background: url(images/img07.gif) repeat-x left bottom;
 }
+
+.info
+{
+    font-size: 12pt;
+    color: black;
+}
+
+figure.img {
+  margin: 0;
+  text-align: center;
+}
+figure.img img {  /* изображение уменьшается пропорционально экрану браузера */
+  max-width: 100%;
+  height: auto;
+}
+figure.img figcaption {  /* стиль описания */
+  padding: 0 1%;
+  font: italic 90% Georgia,serif;
+}
+
 
 .bottom {
 	display: block;

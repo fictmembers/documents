@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Check My Competence - Main</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+  <ul id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="https://github.com/fictmembers/competition_project">Git</a></li>
+    <li><a href="https://github.com/fictmembers/documents">          Документи</a></li>
+    <li><a href="aboutme.html">About</a></li>
+  </ul>
+</div>
+<div id="content">
+  <div id="colOne">
+      <h3>Версії проекту:</h3>
+      <ul class="bottom">
+        <li class="first">    <a href="html/v1/index.html">Версія 1</a></li>
+                          <li><a href="html/v2/index.html">Версія 2</a></li>
+                          <li><a href="html/v3/index.html">Версія 3</a></li>
+                          <li><a href="html/v4/index.html">Версія 4</a></li>
+                          <li><a href="html/v5/index.html">Версія 5</a></li>
+                          <li><a href="html/v6/index.html">Версія 6</a></li>
+                          <li><a href="html/v7/index.html">Версія 7</a></li>
+                          <li><a href="html/v8/index.html">Версія 8</a></li>
+      </ul>
+  </div>
+  <div id="colTwo">
+    <h2>Версія 7</h2>
+    <p class="bottom"><strong>Вбудовування модулю перевірки тестів</strong></br>Забезпечити коректну перевірку тестів при проходженні їх користувачем</br>
+  </br></p>
+
+
+
+    <div class="box">
+      <h3>Версія - 7. </br><a href="html/v5/index.html">Вбудовування модулю перевірки тестів</a></h3>
+      <h4><strong>09.03.2015</strong> |</h4>
+      <p class="bottom"><strong>Завдання:</strong> Забезпечити коректну перевірку тестів при проходженні їх користувачем</p>
+    </div>
+
+<div class="info">
+  На даному етапі нами були додані механізми перевірки тестів. Тестування поділяюєься на  3 етапи:
+  <ul>
+    <li> Тести на логіку </li>
+    <li> Тести на перевірку знань </li>
+    <li> Перевірка умінь </li>
+  </ul>
+
+Спочатку користувач проходить тести на логіку.
+
+  <br><br>
+  <figure class="img">
+     <img alt="" src="img/logic.png" >
+     <figcaption><br> Рис.1 Тести на логіку</figcaption>
+ </figure>
+ <br><br>
+  Тести являють собою питання з 4 можливими  варіантами відповіді.
+  Тестування вважається пройденим, якшо користувач набрав більше 50% правильних відповідей. Якщо користувач набрав необхідну кількість балів в поточному тестування,
+  він отримує відповідне повідомлення:
+  <br><br>
+  <figure class="img">
+     <img alt="" src="img/done_logic.png" >
+     <figcaption><br> Рис.2 Повідомлення про успішне проходження тестів на логіку</figcaption>
+ </figure>
+ <br><br>
+
+Інакше користувач отримує відповідне повідомлення. І на цьому все тестування завершується.
+<br><br>
+<figure class="img">
+   <img alt="" src="img/error.png" >
+   <figcaption><br> Рис.3 Повідомлення про  неуспішне проходження тестів на логіку</figcaption>
+</figure>
+<br><br>
+
+
+   Якщо користувач набрав необхыдну кількість балів в тестах на логіку, то він переходить до перевірки знань.
+  <br><br>
+  <figure class="img">
+     <img alt="" src="img/knowledge.png" >
+     <figcaption><br> Рис.4 Тести на перевірку знань</figcaption>
+ </figure>
+ <br><br>
+ Так само в цьому випадку користувачу необхідно набрати 50% правильних відповідей. У цьому випадку користувач отримає повідомлення:
+ <br><br>
+ <figure class="img">
+    <img alt="" src="img/done_know.png" >
+    <figcaption><br> Рис.5 Повідомлення про успішне проходження тестів на перевірку знань</figcaption>
+ </figure>
+
+ <br><br>
+
+Все це забезпечається за допомогою наступного коду:
+<br><br>
+<figure class="img">
+   <img alt="" src="img/controller.jpg" >
+   <figcaption><br> Рис.6 Функція перевірки тестів</figcaption>
+</figure>
+<br><br>
+
+Тут (<b> @test </b>)- масив що зберігає в собі всі поточні тести. (<b> @answer[] </b>) - масив відповідей користувача на кожний тест.
+(<b> @index </b>) - лічильник відповідей користувача. (<b> @right_answers </b>) - лічильник правильних відповідей користувача на тести.
+Мінімальна кількість правильних відповідей для проходження тестування - 50 % , що видно з умови (<b>  @right_answers > (@index/2) </b>)
+У випадку успіху користувач потрапляє на сторінку підтвердження результату, а згодом до наступного етапу тестування. В іншому випадку користувач потрапляє на сторінку,
+на якій вказано що він не набрав необхідну кількість балів, а після цього має змогу повернутися до свого особистого кабінету.
+
+
+</div>
+
+
+  </div>
+</div>
+<div id="footer">
+  <p>Copyright (c) 2006 Sitename.com. All rights reserved. Design by <a href="http://freecsstemplates.org/">Free CSS Templates</a>.</p>
+</div>
+</body>
+</html>

@@ -24,6 +24,12 @@ body {
 h1 {
 }
 
+.info
+{
+    font-size: 12pt;
+    color: black;
+}
+
 h2, h3, h4, h5, h6 {
 	color: #2582A4;
 }

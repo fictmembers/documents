@@ -32,6 +32,12 @@ p, ol, ul {
 	text-align: justify;
 }
 
+.info
+{
+    font-size: 12pt;
+    color: black;
+}
+
 strong {
 	font-weight: bold;
 	color: #808080;
